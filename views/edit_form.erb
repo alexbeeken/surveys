@@ -1,0 +1,41 @@
+<h1>Welcome to the Edit Your Own Survey Survice</h1>
+
+<form action = "/update_survey" method = "post">
+  <label for="title">Title:</label>
+  <%= "<input id='title' name='title' type='text' value='#{@survey.title}'>" %>
+  <%= "<input id='survey_id' name='survey_id' type='hidden' value='#{@survey.id}'>" %>
+
+<br>
+
+
+  <label for="question">Name:</label>
+  <%= "<input id='question' name='question' type='text' value='#{@questions[0].text}'>" %>
+  <%= "<input id='question_id' name='question_id' type='hidden' value='#{@questions[0].id}'>" %>
+<br>
+
+  <label for="answer1">Answer 1:</label>
+  <%= "<input id='answer1' name='answer1' type='text'value='#{@answers[0].text}'>" %>
+  <%= "<input id='answer1_id' name='answer1_id' type='hidden' value='#{@answers[0].id}'>" %>
+
+<br>
+
+  <label for="answer2">Answer 2:</label>
+  <%= "<input id='answer2' name='answer2' type='text'value='#{@answers[1].text}'>" %>
+  <%= "<input id='answer2_id' name='answer2_id' type='hidden' value='#{@answers[1].id}'>" %>
+
+<br>
+
+  <label for="answer3">Answer 3:</label>
+  <%= "<input id='answer3' name='answer3' type='text'value='#{@answers[2].text}'>" %>
+  <%= "<input id='answer3_id' name='answer3_id' type='hidden' value='#{@answers[2].id}'>" %>
+
+<br>
+
+  <label for="answer4">Answer 4:</label>
+  <%= "<input id='answer4' name='answer4' type='text'value='#{@answers[3].text}'>" %>
+  <%= "<input id='answer4_id' name='answer4_id' type='hidden' value='#{@answers[3].id}'>" %>
+
+<br>
+
+  <button type="submit">Add Survey</button>
+</form>

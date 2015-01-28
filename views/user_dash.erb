@@ -1,0 +1,18 @@
+<h1>Choose a Survey!</h1>
+
+<table>
+  <tr>
+    <th>
+      Title
+    </th>
+  </tr>
+<% @surveys.each() do |survey| %>
+  <tr>
+    <td>
+      <%= survey.name %>
+    </td>
+    <td>
+      <a href="/take_survey/<%= survey.id %>">GET SURVED</a>
+    </td>
+  </tr>
+</table>

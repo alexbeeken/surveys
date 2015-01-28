@@ -1,0 +1,31 @@
+<h1>All your boys</h1>
+
+<table>
+  <tr>
+    <th>
+      Title
+    </th>
+    <th>
+      Options
+    </th>
+  </tr>
+<% @surveys.each() do |survey| %>
+  <tr>
+    <td>
+      <%= "<a href='/survey/#{survey.id}'>#{survey.title}</a>" %>
+    </td>
+    <td>
+      <form action='/delete_survey' method='post'>
+        <input type='hidden' name='id' value="<%= survey.id %>">
+        <input type='submit' value='DELETE'>
+      </form>
+    </td>
+    <td>
+      <form action='/edit_form' method='post'>
+        <input type='hidden' name='id' value="<%= survey.id %>">
+        <input type='submit' value='EDIT'>
+      </form>
+    </td>
+  </tr>
+  <% end %>
+</table>
